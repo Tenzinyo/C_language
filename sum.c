@@ -1,7 +1,8 @@
 long plus(long x, long y);
 void sumstore(long x, long y, long *dest){
     long t = plus(x,y);
-    *dest = t; //memory is the dest in c
+    *dest = t; //store t where designated by dest. In assembly = movq %rax, (%rbx)
+    // object code = 0x40059e
 }
 
 // sumstore x86-64 assembly
