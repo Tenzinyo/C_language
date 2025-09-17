@@ -15,6 +15,6 @@ myFunction:
   subl %ecx, %eax
   # eax -= ecx , or eax = 3a-10b_local
   addl $-2, %eax
-  # eax+=-2
+  # eax+=-2, 3a - 10b -2
   retq
-  # 3a - 10b -2 , return eax
+  # return eax
