@@ -5,23 +5,12 @@
 _afunction:                             ; @afunction
 	.cfi_startproc
 ; %bb.0:
-	sub	sp, sp, #32
-	.cfi_def_cfa_offset 32
-	str	x0, [sp, #24]
-	str	x1, [sp, #16]
-	ldr	x9, [sp, #24]
 	mov	w8, #3
-	str	w8, [x9]
-	ldr	x8, [sp, #16]
-	ldr	w8, [x8]
+	str	w8, [x0]
+	ldr	w8, [x1]
 	lsl	w8, w8, #1
-	ldr	x9, [sp, #24]
-	str	w8, [x9]
-	ldr	x8, [sp, #24]
-	ldr	w8, [x8]
-	str	w8, [sp, #12]
-	ldr	w0, [sp, #12]
-	add	sp, sp, #32
+	str	w8, [x0]
+	mov	x0, x8
 	ret
 	.cfi_endproc
                                         ; -- End function
